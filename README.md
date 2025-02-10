@@ -1,4 +1,4 @@
-# PlayStation Gaming Center
+# Produccts Inventory
 A fullstack .NET MVC Core web application.
 
 
