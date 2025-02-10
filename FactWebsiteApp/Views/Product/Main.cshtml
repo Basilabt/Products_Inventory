@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Products";
+}
+
+
+@model FactWebsiteApp.Models.ViewModel.clsProductViewModel;
+
+
+
+<link rel="stylesheet" href="~/css/Product.css" />
+
+<div class="products-container">
+
+    @foreach(var product in Model.productsList)
+    {
+
+        <a class="product-link" asp-controller="Product" asp-action="Update" asp-route-productID="@product.productID">
+
+            <div class="product-card">
+                <!-- Image on the left -->
+                <div class="product-image">
+                    <img src="/Icons/laptop.png" alt="Product Image">
+                </div>
+
+                <!-- Vertical separator -->
+                <div class="vertical-separator"></div>
+
+                <!-- Product details on the right -->
+                <div class="product-details">
+                    <p><strong>ID:</strong> @product.productID</p>
+                    <p><strong>Serial Number:</strong> @product.serialNumber</p>
+                    <p><strong>Name:</strong> @product.name </p>
+                    <p><strong>Description:</strong> @product.description</p>
+                    <p><strong>Price:</strong> @product.price JOD</p>
+                </div>
+
+            </div>
+
+
+       </a>
+
+
+
+    }
+
+    @if (TempData["Message"] != null)
+    {
+        <script>
+            alert("@TempData["Message"]");
+        </script>
+    }
+
+
+</div>

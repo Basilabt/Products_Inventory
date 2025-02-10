@@ -1,0 +1,108 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+
+@model FactWebsiteApp.Models.ViewModel.clsRegisterViewModel;
+
+
+<head>
+
+    <link rel="stylesheet" href="~/css/Register.css" />
+
+</head>
+
+<body>
+
+
+    <div class="register-container">
+
+        <div class="register-card">
+
+            <h3 class="register-header">Register</h3>
+           
+            <form method="post" action="/Authentication/Register">
+
+                
+                <div class="form-group mb-3">
+                    <label for="firstname">First Name</label>
+                    <input asp-for="firstname" type="text" id="firstname" name="firstname" class="form-control" placeholder="Enter firstname"  />
+                    <span asp-validation-for="firstname" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group mb-3">
+                    <label for="secondname">Second Name</label>
+                    <input asp-for="secondname" type="text" id="secondname" name="secondname" class="form-control" placeholder="Enter secondname"  />
+                    <span asp-validation-for="secondname" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group mb-3">
+                    <label for="thirdname">Third Name</label>
+                    <input asp-for="thirdname" type="text" id="thirdname" name="thirdname" class="form-control" placeholder="Enter thirdname"  />
+                    <span asp-validation-for="thirdname" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group mb-3">
+                    <label for="lastname">Last Name</label>
+                    <input asp-for="lastname" type="text" id="lastname" name="lastname" class="form-control" placeholder="Enter lastname"  />
+                    <span asp-validation-for="lastname" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group mb-3">
+                    <label for="email">Email</label>
+                    <input asp-for="email" type="email" id="email" name="email" class="form-control" placeholder="Enter email"  />
+                    <span asp-validation-for="email" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group mb-3">
+                    <label for="phonenumber">Phone Number</label>
+                    <input asp-for="phonenumber" type="tel" id="phonenumber" name="phonenumber" class="form-control" placeholder="Enter phone number"  />
+                    <span asp-validation-for="phonenumber" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group mb-3">
+                    <label for="username">Username</label>
+                    <input asp-for="username" type="text" id="username" name="username" class="form-control" placeholder="Enter username"  />
+                    <span asp-validation-for="username" class="text-danger"></span>                 
+                </div>
+
+
+                <div class="form-group mb-4">
+                    <label for="password">Password</label>
+                    <input asp-for="password" type="password" id="password" name="password" class="form-control" placeholder="Enter password"  />
+                    <span asp-validation-for="password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label>Gender</label>
+                    <div>
+                        <input asp-for="isMale" type="radio" id="male" name="isMale" value="Male" value=true/>
+                        <label for="male">Male</label>
+
+                        <input asp-for="isMale" type="radio" id="female" name="isMale" value="Female"  value=false/>
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+
+
+                <button type="submit" class="submit-btn">Register</button>
+
+            </form>
+
+            <p class="text-center mt-3">
+                Already have an account? <a href="/Authentication/Login">Login</a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+

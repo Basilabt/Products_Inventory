@@ -1,0 +1,116 @@
+﻿@{
+    ViewData["Title"] = "Main";
+}
+
+
+<link rel="stylesheet" href="~/css/Main.css" />
+
+@* <h1> Logged In Succesfully </h1>
+<h2> Welcome Back, @FactWebsiteApp.Models.Business.clsGlobal.loggedUser.username</h2> *@
+
+
+<div class="card-container">
+
+
+    <a href="@Url.Action("UserInfo","User")">
+    <div class="card">
+
+            <p>
+
+                <img class="card-icon" src="/Icons/Person.png" />
+            <p class="card-title">Info</p>
+
+            </p>    
+
+    </div>
+
+    </a>
+    
+
+    <a href="@Url.Action("Update","User")">
+
+        <div class="card">
+
+            <p>
+                <img class="card-icon" src="/Icons/Transaction.png" />
+            <p class="card-title">Update</p>
+
+            </p>
+
+        </div>
+
+    </a>
+
+
+    <a href="@Url.Action("Delete","User")">
+
+        <div class="card">
+
+            <p>
+
+                <img class="card-icon" src="/Icons/Delete.png" />
+                <p class="card-title">Delete</p>
+
+            </p>
+
+        </div>
+
+    </a>
+
+    
+    <a href="@Url.Action("Main","Inventory")">
+
+        <div class="card">
+
+            <p>
+
+                <img class="card-icon" src="/Icons/inventory.png" />
+            <p class="card-title">Inventory</p>
+
+            </p>
+
+
+        </div>
+
+
+    </a>
+
+
+    <a href="@Url.Action("Main","Product")">
+
+        <div class="card">
+
+            <p>
+
+                <img class="card-icon" src="/Icons/Products.png" />
+            <p class="card-title">Products</p>
+
+            </p>
+
+
+        </div>
+
+    </a>
+
+
+    <a href="@Url.Action("Logout","Authentication")">
+
+        <div class="card">
+
+            <p>
+
+                <img class="card-icon" src="/Icons/Logout.png" />
+            <p class="card-title">Logout</p>
+
+            </p>
+
+        </div>
+
+    </a>
+
+</div>
+
+
+
+
+

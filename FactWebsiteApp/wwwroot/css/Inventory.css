@@ -1,0 +1,88 @@
+﻿.inventory-container {
+    padding: 20px;
+}
+
+.inventory-header {
+    display: flex;
+    justify-content: center;
+}
+
+.inventory-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.form-control {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.add-btn {
+    background-color: orangered;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+
+
+
+
+.inventories-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+
+    .inventories-table th, .inventories-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .inventories-table th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+
+    .inventories-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .inventories-table tr:hover {
+        background-color: #f1f1f1;
+    }
+
+
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons form {
+        display: inline-block;
+ }
+
+.action-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border: none;
+    background: none;
+}
+
+
+    .action-link.delete {
+        color: red;
+        font-weight: bold;
+    }

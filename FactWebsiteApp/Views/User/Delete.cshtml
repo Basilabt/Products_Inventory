@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<link href="/css/DeleteUser.css" rel="stylesheet" />
+
+
+<div class="user-info-container">
+
+    <div class="user-info-card">
+
+        <img class="user-img" src="/Icons/Person.png" alt="User Image" />
+        <p class="user-username"> @@@FactWebsiteApp.Models.Business.clsGlobal.loggedUser.username</p>
+
+        <div class="user-details">
+            <p><strong>Name:</strong> @FactWebsiteApp.Models.Business.clsGlobal.loggedUser.person.fullname</p>
+            <p><strong>Phone:</strong> @FactWebsiteApp.Models.Business.clsGlobal.loggedUser.person.phoneNumber</p>
+            <p><strong>Email:</strong> @FactWebsiteApp.Models.Business.clsGlobal.loggedUser.person.email</p>
+            <p><strong>Gender:</strong> @FactWebsiteApp.Models.Business.clsGlobal.loggedUser.person.genderAsString</p>
+            <p><strong>Account Status:</strong> @FactWebsiteApp.Models.Business.clsGlobal.loggedUser.accountStatus</p>
+        </div>
+
+        <form method="post" action="/User/DeleteUser">
+
+            <button class="delete-button" type="submit">Delete</button>
+
+        </form>
+
+        
+
+    </div>
+
+
+</div>

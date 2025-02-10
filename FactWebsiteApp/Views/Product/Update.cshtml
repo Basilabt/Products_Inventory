@@ -1,0 +1,51 @@
+﻿@model FactWebsiteApp.Models.ViewModel.clsProductViewModel;
+
+<link rel="stylesheet" href="~/css/UpdateProduct.css" />
+
+<div class="update-container">
+    <div class="update-card">
+        <h3 class="update-header">Update Product</h3>
+
+        
+        <form method="post" action="/Product/UpdateInfo" onsubmit="return confirm('Are you sure you want to update product ?');">
+          
+            <input type="hidden" asp-for="productID" />
+
+            <div class="form-group mb-3">
+                <label for="serialNumber">Serial Number</label>
+                <input asp-for="serialNumber" type="text" id="serialNumber" name="serialNumber" class="form-control" />
+                <span asp-validation-for="serialNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="name">Name</label>
+                <input asp-for="name" type="text" id="name" name="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="description">Description</label>
+                <input asp-for="description" type="text" id="description" name="description" class="form-control" />
+                <span asp-validation-for="description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="price">Price</label>
+                <input asp-for="price" type="text" id="price" name="price" class="form-control" />
+                <span asp-validation-for="price" class="text-danger"></span>
+            </div>
+
+           
+            <button type="submit" class="update-btn">Update</button>
+        </form>
+
+     
+        <form method="post" action="/Product/Delete" onsubmit="return confirm('Are you sure you want to delete ?');">
+            <input type="hidden" asp-for="productID" />
+            <button type="submit" class="delete-btn">Delete</button>
+        </form>
+
+    </div>
+
+
+</div>

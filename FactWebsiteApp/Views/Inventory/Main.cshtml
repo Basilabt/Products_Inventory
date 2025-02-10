@@ -1,0 +1,88 @@
+﻿@model FactWebsiteApp.Models.ViewModel.clsInventoryViewModel
+
+<link rel="stylesheet" href="~/css/Inventory.css" />
+
+<div class="inventory-container">
+
+    <div class="inventory-header">
+
+        <form method="post" action="/Inventory/Add" class="inventory-form">
+
+            <!-- Product Dropdown -->
+            <select asp-for="productID"  class="form-control">
+                <option value="">Select Product</option>
+                @foreach (var product in Model.productList)
+                {
+                    <option value="@product.productID">@product.name</option>
+                }
+            </select>
+            <span asp-validation-for="productID" class="text-danger"></span>
+
+            <!-- Quantity Dropdown -->
+            <select asp-for="productQuantity" class="form-control">
+                <option value="">Select Quantity</option>
+                @for (int i = 1; i <= 10; i++)
+                {
+                    <option value="@i">@i</option>
+                }
+            </select>
+            <span asp-validation-for="productQuantity" class="text-danger"></span>
+
+            <button type="submit" class="add-btn">Add</button>
+
+        </form>
+            
+    </div>
+
+
+
+    <table class="inventories-table">
+        <thead>
+            <tr>
+                <th>Inventory ID</th>
+                <th>Serial Number</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var inventory in Model.userInventories)
+            {
+                <tr>
+                    <td>@inventory.inventoryID</td>
+                    <td>@inventory.serialNumber</td>
+                    <td>@inventory.name</td>
+                    <td>@inventory.description</td>
+                    <td>@inventory.unitPrice JOD</td>
+                    <td>@inventory.quantity</td>
+                    <td>@inventory.total JOD</td>
+
+                    <td>
+
+                         <div class="action-buttons">
+                       
+                            <!-- Delete -->
+                            <form method="post" action="/Inventory/Delete" onsubmit="return confirm('Are you sure you want to delete ?');">
+                                <input type="hidden" name="inventoryID" value="@inventory.inventoryID" />
+                                <button type="submit" class="action-link delete">Delete </button>
+                            </form>
+
+
+                         </div>
+
+                    </td>
+
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+</div>
