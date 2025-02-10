@@ -12,16 +12,11 @@ A fullstack .NET MVC Core web application.
 ## Database Relational Schema
 ![Image](https://github.com/user-attachments/assets/cb741ae0-f938-4024-9382-3a0f26436c65)
 
-
-## Application Preview
-![Image](https://github.com/user-attachments/assets/4aa86d89-4bb7-4dbe-a77c-7ddcef5f544d)
-
-
 ### Login Screen
-
+![Image](https://github.com/user-attachments/assets/2e0b1e3e-fb26-4ff7-a009-59f38043d847)
 
 ### Main Screen
-![Image](https://github.com/Basilabt/Products_Inventory/issues/2#issue-2841642597)
+![Image](https://github.com/user-attachments/assets/4aa86d89-4bb7-4dbe-a77c-7ddcef5f544d)
 
 ### Preview
 ![Image](https://github.com/user-attachments/assets/112d68d7-685e-4990-809a-2d8c531072e5)
